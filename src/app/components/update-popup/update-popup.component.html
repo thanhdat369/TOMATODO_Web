@@ -1,0 +1,10 @@
+<button class="bg-green-500 p-2 m-2 rounded-xl text-white" 
+  (click)="toggleUpdatePopup()">Update Popup</button>
+
+<app-popup-form
+  [isVisible]="updatePopupVisible"
+  [type]="'Update Popup'"
+  [msg]="'The task 2022 can edit'"
+  (onOkClick)="onUpdateOkClick()"
+  (closePopup)="toggleUpdatePopup()"
+></app-popup-form>

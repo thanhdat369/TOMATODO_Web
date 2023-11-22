@@ -1,0 +1,10 @@
+<button class="bg-blue-500 p-2 m-2 rounded-xl text-white" 
+  (click)="toggleCreatePopup()">Create Popup</button>
+
+<app-popup-form
+  [isVisible]="createPopupVisible"
+  [type]="'Create Popup'"
+  [msg]="'The task 2022 can edit'"
+  (onOkClick)="onCreateOkClick()"
+  (closePopup)="toggleCreatePopup()"
+></app-popup-form>

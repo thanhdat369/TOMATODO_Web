@@ -1,0 +1,177 @@
+h3 {
+    color: theme('colors.MainColor');
+    text-align: center;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h4 {
+    color: theme('colors.LightColor');
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+// Default size popup for 3 type popup
+.delete-popup-form,
+.update-popup-form,
+.add-popup-form {
+    width: 435px;
+    height: 208px;
+    border-radius: 20px;
+    border: 1px solid theme('colors.MainColor');
+    background: theme('colors.BackgroundColor');
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+// Delete Popup Form
+.delete-header {
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+        margin-top: 14px;
+        margin-left: 17px;
+    }
+
+    div {
+        margin-top: 10px;
+        margin-right: 10.3px;
+        cursor: pointer;
+    }
+
+    .close-putton {
+        width: 21px;
+        height: 21px;
+        padding: 0;
+
+        svg rect {
+            transform: rotate(-45.394deg);
+            flex-shrink: 0;
+        }
+    }
+}
+
+.delete-content {
+    display: flex;
+    width: 285px;
+    height: 54px;
+    margin-left: 75px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+// Footer for 3 form popup
+.delete-footer,
+.update-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 9px;
+    margin-bottom: 13px;
+    margin-right: 19px;
+
+    .ok-button,
+    .cancel-button {
+        width: 90px;
+        height: 30px;
+        border-radius: 10px;
+    }
+
+    .ok-button {
+        border: 1px solid theme('colors.MainColor');
+        
+        h4 {
+            color: theme('colors.MainColor');
+        }
+    }
+s
+    .cancel-button {
+        border: 1px solid theme('colors.LightColor');
+    }
+}
+
+// Update Popup Form
+.update-header {
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+
+    div {
+        margin-top: 10px;
+        margin-right: 10.3px;
+        cursor: pointer;
+    }
+
+    .close-putton {
+        width: 21px;
+        height: 21px;
+        padding: 0;
+    }
+}
+
+// Body content use for Update and Create Popup Form
+.update-content {
+    display: flex;
+    justify-content: center;
+
+    .time-part {
+        display: inline-flex;
+        gap: 15px;
+
+        .time-element-box {
+            width: 50px;
+            height: 59px;
+            color: theme('colors.LightColor');
+            border-radius: 8px;
+            border: 1px solid theme('colors.MainColor');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .time-number {
+                color: theme('colors.MainColor');
+                font-family: Inter;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+
+        .time-colon {
+            color: theme('colors.MainColor');
+            text-align: center;
+            font-family: Inter;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .take-note {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 285px;
+        height: 54px;
+        margin: 0 auto;
+    }
+}
