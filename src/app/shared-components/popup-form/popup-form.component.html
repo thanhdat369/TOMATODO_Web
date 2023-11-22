@@ -1,0 +1,117 @@
+<div *ngIf="isVisible"
+  class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50">
+  <!-- Create Popup form -->
+  <ng-container *ngIf="type === 'Create Popup'">
+    <div class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50">
+      <div class="update-popup-form">
+        <!-- Title and Close icon -->
+        <div class="update-header">
+          <h3 class="title"> Create new task </h3>
+          <div class="close-button">
+            <!-- SVG code here -->
+            <svg xmlns="http://www.w3.org/2000/svg" (click)="onCloseClick()" width="30" height="30" viewBox="0 0 30 30" fill="none">
+              <rect x="5.69562" y="20.569" width="21" height="5" transform="rotate(-45.3943 5.69562 20.569)" fill="#FD6D64"/>
+              <rect x="20.6643" y="23.9418" width="21" height="4.93124" transform="rotate(-135.695 20.6643 23.9418)" fill="#FD6D64"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Body content popup form -->
+        <div class="update-content">
+          <div class="time-part-cover">
+            <div class="time-part">
+              <div class="time-element-box"><p class="time-number">1</p></div>
+              <div class="time-element-box"><p class="time-number">2</p></div>
+              <div class="time-colon"><p>:</p></div>
+              <div class="time-element-box"><p class="time-number">3</p></div>
+              <div class="time-element-box"><p class="time-number">4</p></div>
+            </div>
+            <div class="take-note">
+              <h3> {{ msg }}</h3>
+            </div>
+          </div>
+        </div> 
+        <!-- Footer popup -->
+        <div class="update-footer">
+          <button (click)="onOkClick()" class="ok-button">
+            <h4>Create</h4>
+          </button>
+          <button (click)="onCloseClick()" class="cancel-button">
+            <h4>Cancel</h4>
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- Update Popup Form -->
+  <ng-container *ngIf="type === 'Update Popup'">
+    <div class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50">
+      <div class="update-popup-form">
+        <!-- Title and Close icon -->
+        <div class="update-header">
+          <h3 class="title"> Update new task </h3>
+          <div class="close-button">
+            <!-- SVG code here -->
+            <svg xmlns="http://www.w3.org/2000/svg" (click)="onCloseClick()" width="30" height="30" viewBox="0 0 30 30" fill="none">
+              <rect x="5.69562" y="20.569" width="21" height="5" transform="rotate(-45.3943 5.69562 20.569)" fill="#FD6D64"/>
+              <rect x="20.6643" y="23.9418" width="21" height="4.93124" transform="rotate(-135.695 20.6643 23.9418)" fill="#FD6D64"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Body content popup form -->
+        <div class="update-content">
+          <div class="time-part-cover">
+            <div class="time-part">
+              <div class="time-element-box"><p class="time-number">1</p></div>
+              <div class="time-element-box"><p class="time-number">2</p></div>
+              <div class="time-colon"><p>:</p></div>
+              <div class="time-element-box"><p class="time-number">3</p></div>
+              <div class="time-element-box"><p class="time-number">4</p></div>
+            </div>
+            <div class="take-note">
+              <h3>{{ msg }}</h3>
+            </div>
+          </div>
+        </div> 
+        <!-- Footer popup -->
+        <div class="update-footer">
+          <button (click)="onOkClick()" class="ok-button">
+            <h4>Update</h4>
+          </button>
+          <button (click)="onCloseClick()" class="cancel-button">
+            <h4>Cancel</h4>
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <!-- Delete Popup Form -->
+  <ng-container *ngIf="type === 'Delete Popup'">
+    <div class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50">
+      <div class="delete-popup-form">
+        <!-- Title and Close icon -->
+        <div class="delete-header">
+          <h3 class="title"> Delete Confirmation </h3>
+          <div class="close-button">
+            <!-- SVG code here -->
+            <svg xmlns="http://www.w3.org/2000/svg" (click)="onCloseClick()" width="30" height="30" viewBox="0 0 30 30" fill="none">
+              <rect x="5.69562" y="20.569" width="21" height="5" transform="rotate(-45.3943 5.69562 20.569)" fill="#FD6D64"/>
+              <rect x="20.6643" y="23.9418" width="21" height="4.93124" transform="rotate(-135.695 20.6643 23.9418)" fill="#FD6D64"/>
+            </svg>
+          </div>
+        </div>
+        <div class="delete-content">
+          <h3> {{ msg }}  </h3>
+        </div>    
+        <div class="delete-footer">
+          <button (click)="onOkClick()" class="ok-button">
+            <h4>Remove</h4>
+          </button>
+          <button (click)="onCloseClick()" class="cancel-button">
+            <h4>Cancel</h4>
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

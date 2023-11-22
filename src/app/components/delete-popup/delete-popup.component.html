@@ -1,0 +1,10 @@
+<button class="bg-red-500 p-2 m-2 rounded-xl text-white" 
+  (click)="toggleDeletePopup()">Delete Popup</button>
+
+<app-popup-form
+  [isVisible]="deletePopupVisible"
+  [type]="'Delete Popup'"
+  [msg]="'Do you want to remove it?'"
+  (onOkClick)="onDeleteOkClick()"
+  (closePopup)="toggleDeletePopup()"
+></app-popup-form>
