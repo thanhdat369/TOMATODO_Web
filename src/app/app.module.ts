@@ -7,6 +7,7 @@ import { PopupFormComponent } from './shared-components/popup-form/popup-form.co
 import { DeletePopupComponent } from './components/delete-popup/delete-popup.component';
 import { UpdatePopupComponent } from './components/update-popup/update-popup.component';
 import { CreatePopupComponent } from './components/create-popup/create-popup.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,13 +15,10 @@ import { CreatePopupComponent } from './components/create-popup/create-popup.com
     PopupFormComponent,
     DeletePopupComponent,
     UpdatePopupComponent,
-    CreatePopupComponent
+    CreatePopupComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
