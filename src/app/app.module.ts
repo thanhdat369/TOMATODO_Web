@@ -3,10 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {SharedModule} from "./shared/shared.module";
+import { PopupFormComponent } from './shared-components/popup-form/popup-form.component';
+import { DeletePopupComponent } from './components/delete-popup/delete-popup.component';
+import { UpdatePopupComponent } from './components/update-popup/update-popup.component';
+import { CreatePopupComponent } from './components/create-popup/create-popup.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    PopupFormComponent,
+    DeletePopupComponent,
+    UpdatePopupComponent,
+    CreatePopupComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
