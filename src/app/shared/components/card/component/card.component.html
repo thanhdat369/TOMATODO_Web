@@ -1,0 +1,39 @@
+<div
+  class="flex gap-5 rounded-full group hover:border-MainColorHover border-2 items-center justify-between relative m-4"
+  [ngClass]="{
+    'border-MainColor ': !isCompleted,
+    'border-Secondary': isCompleted
+  }"
+>
+  <div class="flex">
+    <div
+      (click)="handleClick($event)"
+      class="rounded-full border-2 ms-3 p-3 group-hover:border-MainColorHover group-hover:bg-MainColorHover cursor-pointer me-3"
+      [ngClass]="{
+        'border-MainColor bg-MainColor': !isCompleted,
+        'border-Secondary bg-Secondary': isCompleted
+      }"
+    ></div>
+    <div
+      class="group-hover:text-MainColorHover"
+      [ngClass]="{
+        'text-MainColor': !isCompleted,
+        'text-Secondary line-through	': isCompleted
+      }"
+    >
+      {{ taskName }}
+    </div>
+  </div>
+  <div
+    class="text-white group-hover:bg-MainColorHover p-3 rounded-r-full w-[120px] text-center"
+    [ngClass]="{ 'bg-MainColor': !isCompleted, 'bg-Secondary': isCompleted }"
+  >
+    0/{{ duration }} min
+  </div>
+  <div
+    class="absolute right-0 top-[-20px] group-hover:inline-flex hidden cursor-pointer text-MainColor font-bold text-[24px]"
+    (click)="handleDelete($event)"
+  >
+    X
+  </div>
+</div>
