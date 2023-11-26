@@ -1,0 +1,17 @@
+.container {
+    width: 100%;
+}
+
+.icon {
+    position: relative;
+    left: 23%;
+    cursor: pointer;
+}
+
+.icon:hover {
+    opacity: 50%;
+}
+
+.popup-general:hover{
+    opacity: 100%;
+}
