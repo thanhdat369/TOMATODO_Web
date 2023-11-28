@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-update-popup',
-  templateUrl: './update-popup.component.html',
-  styleUrls: ['./update-popup.component.scss']
+  templateUrl: './update-popup.component.html'
 })
 export class UpdatePopupComponent {
   updatePopupVisible: boolean = false;
