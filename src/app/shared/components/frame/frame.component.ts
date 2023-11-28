@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-frame',
@@ -14,21 +14,10 @@ export class FrameComponent {
     // ... Các task khác
   ];
 
-  constructor(private elementRef: ElementRef) {}
+  constructor() {}
 
   addNewTask() {
     this.tasks.push({ name: 'New Task', isCompleted: false, duration: '60' });
     // Có thể thay đổi thông tin của task mới được thêm vào ở đây
-  }
-
-  handleScroll(event: any) {
-    const element: HTMLElement = this.elementRef.nativeElement.querySelector('.form-holder');
-    const scrolled = element.scrollTop + element.clientHeight;
-    const totalHeight = element.scrollHeight;
-
-    if (scrolled === totalHeight) {
-      // Hiển thị các task bị ẩn khi cuộn tới cuối cùng
-      console.log('Đã cuộn tới cuối cùng. Hiển thị các task bị ẩn nếu có.');
-    }
   }
 }
