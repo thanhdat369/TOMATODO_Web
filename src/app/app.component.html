@@ -1,16 +1,28 @@
-<h1 class="text-center text-MainColor">
-  Hello world!
-</h1>
+<div class="container bg-black">
+  <app-side-bar></app-side-bar>
 
-<app-create-popup></app-create-popup>
-<app-delete-popup></app-delete-popup>
-<app-update-popup></app-update-popup>
+  <h1 class="text-center text-MainColor">
+    Hello world!
+  </h1>
 
-<div class="">
-  <div class="">
-    <mc-card [isCompleted]="false" taskName="The task one" duration="60"></mc-card>
-    <mc-card [isCompleted]="true" taskName="The task two" duration="90"></mc-card>
-    <mc-card [isCompleted]="false" taskName="The task three" duration="120"></mc-card>
+  <app-create-popup></app-create-popup>
+  <app-delete-popup></app-delete-popup>
+  <app-update-popup></app-update-popup>
+
+  <div>
+    <div class="flex items-center justify-center popup-general">
+      <button class="bg-blue-500 text-white px-4 py-2 rounded mt-4" (click)="popup.openPopup()">Open Popup</button>
+    </div>
+    <app-button-confirm #popup></app-button-confirm>
   </div>
-</div>
 
+  <div class="">
+    <div class="">
+      <mc-card [isCompleted]="false" taskName="The task one" duration="60"></mc-card>
+      <mc-card [isCompleted]="true" taskName="The task two" duration="90"></mc-card>
+      <mc-card [isCompleted]="false" taskName="The task three" duration="120"></mc-card>
+    </div>
+  </div>
+
+  <app-button-confirm></app-button-confirm>
+</div>

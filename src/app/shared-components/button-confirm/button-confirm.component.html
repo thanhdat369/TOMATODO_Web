@@ -1,0 +1,11 @@
+<div class="fixed inset-0 flex items-center justify-center" [ngClass]="{'hidden': !showPopup}">
+    <div class="absolute inset-0 opacity-50" (click)="closePopup()"></div>
+    <div class="bg-black p-4 rounded shadow-md border border-MainColor text-MainColor popup-confirm">
+      <h2 class="text-lg font-semibold mb-4 self-start text-2xl">Delete Confirmation</h2>
+      <p class="mt-3 text-center text-2xl">Do you want to remove it?</p>
+      <div class="flex justify-end mt-5 cursor-pointer">
+        <button class="button-confirm text-MainColor px-2 py-1 rounded mr-2 button-general border border-MainColor" (click)="closePopup()">Remove</button>
+        <button class="button-confirm text-white px-2 py-1 rounded button-general border border-white-500" (click)="closePopup()">Cancel</button>
+      </div>
+    </div>
+</div>
