@@ -8,6 +8,8 @@ import { DeletePopupComponent } from './components/delete-popup/delete-popup.com
 import { UpdatePopupComponent } from './components/update-popup/update-popup.component';
 import { CreatePopupComponent } from './components/create-popup/create-popup.component';
 import { SharedModule } from './shared/shared.module';
+import { ButtonConfirmComponent } from './shared-components/button-confirm/button-confirm.component';
+import { SideBarComponent } from './shared-components/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { SharedModule } from './shared/shared.module';
     DeletePopupComponent,
     UpdatePopupComponent,
     CreatePopupComponent,
+    ButtonConfirmComponent,
+    SideBarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [],
