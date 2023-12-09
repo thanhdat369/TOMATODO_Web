@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-create-popup',
-  templateUrl: './create-popup.component.html',
-  styleUrls: ['./create-popup.component.scss']
+  templateUrl: './create-popup.component.html'
 })
 export class CreatePopupComponent {
   createPopupVisible: boolean = false;
@@ -16,5 +15,6 @@ export class CreatePopupComponent {
     
     this.createPopupVisible = false; 
     // Thêm logic xử lý khác nếu cần
+    console.log('ok function');
   }
 }

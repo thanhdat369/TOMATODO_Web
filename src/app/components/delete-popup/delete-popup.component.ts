@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-delete-popup',
-  templateUrl: './delete-popup.component.html',
-  styleUrls: ['./delete-popup.component.scss']
+  templateUrl: './delete-popup.component.html'
 })
 export class DeletePopupComponent {
   deletePopupVisible: boolean = false;

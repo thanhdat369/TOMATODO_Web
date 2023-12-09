@@ -1,0 +1,13 @@
+<div class="p-4 m-4 h-[450px] flex justify-center ">
+  <div class="p-4 w-3/4 h-full bg-BackgroundColor rounded-3xl border-4 border-MainColor">
+    <!-- Content in frame -->
+    <div class="mb-4 pr-6 flex justify-end">
+      <button (click)="addNewTask()">Add Task</button>
+    </div>
+    
+    <div class="w-full h-3/4 overflow-y-auto">     
+      <mc-card *ngFor="let task of tasks" [isCompleted]="task.isCompleted" [taskName]="task.name"
+        [duration]="task.duration"></mc-card>
+    </div>
+  </div>
+</div>

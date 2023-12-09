@@ -1,10 +1,13 @@
-<h1 class="text-center text-MainColor">
-  Hello world!
-</h1>
-
 <app-create-popup></app-create-popup>
 <app-delete-popup></app-delete-popup>
 <app-update-popup></app-update-popup>
+
+<app-frame>
+  <mc-card [isCompleted]="false" taskName="The task one" duration="60"></mc-card>
+  <mc-card [isCompleted]="true" taskName="The task two" duration="90"></mc-card>
+  <mc-card [isCompleted]="false" taskName="The task three" duration="120"></mc-card>
+</app-frame>
+
 
 <div class="">
   <div class="">
@@ -13,4 +16,3 @@
     <mc-card [isCompleted]="false" taskName="The task three" duration="120"></mc-card>
   </div>
 </div>
-

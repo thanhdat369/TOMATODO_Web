@@ -1,0 +1,38 @@
+/* width */
+::-webkit-scrollbar {
+    width: 9px;
+    height: 91px;
+    flex-shrink: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    stroke-width: 1px;
+    stroke: theme('colors.BackgroundColor');
+    opacity: 0.3;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+button {
+    width: 90px;
+    height: 30px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: theme('colors.MainColor');
+    border-radius: 10px;
+    border: 1px solid theme('colors.MainColor');
+    background-color: theme('colors.BackgroundColor');
+}
